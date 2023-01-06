@@ -4,7 +4,7 @@ export const CssVariables = createGlobalStyle`
   :root {
     // Colors
     --color-primary: #FA7978;
-    --color-secondary: hsla(0, 0%, 35%, 1.0);
+    --color-secondary: hsla(0, 0%, 35%, .2);
     --color-blackish: #4B4B4B;
     --color-whiteish: #FCFCFC;
     --color-error: #EF5D80;

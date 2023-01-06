@@ -2,9 +2,9 @@ import { FC } from "react";
 import styled from "styled-components";
 
 type Props = {
-    message: string;
-    isVisible: boolean;
-    isSuccess?: boolean;
+	message: string;
+	isVisible: boolean;
+	isSuccess?: boolean;
 };
 
 /**
@@ -15,39 +15,39 @@ type Props = {
  */
 
 export const AlertMessage: FC<Props> = ({ message, isVisible, isSuccess }) => {
-    const className = `${isVisible ? "" : "hidden"} ${
-        isSuccess ? "success" : ""
-    }`;
+	const classNameName = `${isVisible ? "" : "hidden"} ${
+		isSuccess ? "success" : ""
+	}`;
 
-    return (
-        <MessageContainer>
-            <Message className={className}>
-                {isVisible && <p>{message}</p>}
-            </Message>
-        </MessageContainer>
-    );
+	return (
+		<MessageContainer>
+			<Message className={classNameName}>
+				{isVisible && <p>{message}</p>}
+			</Message>
+		</MessageContainer>
+	);
 };
 
 const MessageContainer = styled.div`
-    min-height: 5rem;
+	min-height: 5rem;
 `;
 
 const Message = styled.p`
-    margin: 24px auto;
-    text-align: center;
-    height: fit-content;
-    max-width: 350px;
-    width: fit-content;
-    padding: 16px;
-    font-weight: 700;
-    color: var(--color-error);
-    border: 4px solid var(--color-success);
-    border-radius: 1.5rem;
-    &.success {
-        color: ${props => props.theme.color.foreground.positive};
-        border: 4px solid ${props => props.theme.color.foreground.positive};
-    }
-    &.hidden {
-        visibility: hidden;
-    }
+	margin: 24px auto;
+	text-align: center;
+	height: fit-content;
+	max-width: 350px;
+	width: fit-content;
+	padding: 16px;
+	font-weight: 700;
+	color: var(--color-error);
+	border: 4px solid var(--color-success);
+	border-radius: 1.5rem;
+	&.success {
+		color: ${props => props.theme.color.foreground.positive};
+		border: 4px solid ${props => props.theme.color.foreground.positive};
+	}
+	&.hidden {
+		visibility: hidden;
+	}
 `;

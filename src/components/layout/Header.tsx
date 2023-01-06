@@ -17,7 +17,7 @@ export const Header: FC = () => {
 const HeaderWrapper = styled.header`
     display: flex;
     justify-content: space-between;
-    background: var(--color-blackish);
+    background: var(--color-secondary);
 `;
 
 const NavWrapper = styled.nav`
@@ -29,7 +29,7 @@ const NavWrapper = styled.nav`
     gap: 3rem;
     a {
         text-decoration: none;
-        color: var(--color-whiteish);
+        color: var(--color-blackish);
         cursor: pointer;
         &:hover {
             color: var(--color-whiteish);

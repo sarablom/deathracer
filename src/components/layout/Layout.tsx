@@ -9,25 +9,25 @@ const latoRegular = Lato({
 });
 
 interface Props {
-    children: ReactNode;
+	children: ReactNode;
 }
 
 export const Layout: FC<Props> = ({ children }) => (
-    <Wrapper className={latoRegular.className}>
-        <Header />
-        <Main>{children}</Main>
-        <Footer />
-    </Wrapper>
+	<Wrapper className={latoRegular.className}>
+		<Header />
+		<Main>{children}</Main>
+		<Footer />
+	</Wrapper>
 );
 
 const Wrapper = styled.div`
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
 `;
 
 const Main = styled.main`
-    flex: 1;
-    align-self: center;
-    margin-top: 2rem;
+	flex: 1;
+	align-self: center;
+	margin-top: 2rem;
 `;
