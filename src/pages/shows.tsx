@@ -11,7 +11,7 @@ export const Shows: NextPage = () => {
             </Head>
 
             <h1>About</h1>
-            <p>Content coming soon</p>
+            <p>No upcoming events</p>
         </>
     );
 };
