@@ -5608,6 +5608,30 @@ const SvgWrapper = styled.svg`
 		opacity: 0;
 	}
 
+	/* .cls-1 {
+		stroke: red;
+	}
+
+	.cls-2 {
+		stroke: blue;
+	}
+
+	.cls-3 {
+		stroke: green;
+	}
+
+	.cls-4 {
+		stroke: pink;
+	}
+
+	.cls-5 {
+		stroke: yellow;
+	}
+
+	.cls-6 {
+		stroke: grey;
+	} */
+
 	@keyframes drivinFromRight {
 		from {
 			transform: translate(175px, -100px);
