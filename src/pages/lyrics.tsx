@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { MainHeading } from "../components/MainHeading";
 
 export const Lyrics: NextPage = () => {
     return (
@@ -9,7 +10,7 @@ export const Lyrics: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <h1>Lyrics</h1>
+            <MainHeading text="Lyrics" />
             <p>Content coming soon</p>
         </>
     );

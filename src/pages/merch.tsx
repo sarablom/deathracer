@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { MainHeading } from "../components/MainHeading";
 
 export const Merch: NextPage = () => {
 	return (
@@ -9,7 +10,7 @@ export const Merch: NextPage = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<h1>Merch</h1>
+			<MainHeading text="Merch" />
 			<p>Here you will soon be able to buy Deathracer merch</p>
 		</>
 	);
