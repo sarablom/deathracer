@@ -10,7 +10,7 @@ export const Shows: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <h1>About</h1>
+            <h1>Shows</h1>
             <p>No upcoming events</p>
         </>
     );
