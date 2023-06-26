@@ -50,10 +50,6 @@ const NavWrapper = styled.nav`
 		text-decoration: none;
 		color: var(--color-blackish);
 		cursor: pointer;
-		&:hover {
-			color: var(--color-whiteish);
-			background: var(--color-secondary);
-		}
 	}
 `;
 

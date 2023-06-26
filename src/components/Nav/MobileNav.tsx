@@ -36,7 +36,7 @@ const MobielNavWrapper = styled.div`
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 0.7rem;
-  padding: 32px;
+	padding: 32px;
 	background: var(--color-blackish);
 	color: var(--color-whiteish);
 
@@ -53,8 +53,5 @@ const MobielNavWrapper = styled.div`
 		cursor: pointer;
 		font-size: 1.5rem;
 		width: 100%;
-		&:hover {
-			background: var(--color-secondary);
-		}
 	}
 `;

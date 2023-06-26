@@ -1,5 +1,7 @@
+"use client";
 import React, { MouseEventHandler } from "react";
 import Link from "next/link";
+import styled from "styled-components";
 
 type LinksProps = {
 	onClickHandler?: MouseEventHandler;
@@ -8,23 +10,31 @@ type LinksProps = {
 function Links({ onClickHandler }: LinksProps) {
 	return (
 		<>
-			<Link href="/about" onClick={onClickHandler}>
+			<NavbarLink href="/about" onClick={onClickHandler}>
 				About
-			</Link>
-			<Link href="/music" onClick={onClickHandler}>
+			</NavbarLink>
+			<NavbarLink href="/music" onClick={onClickHandler}>
 				Music
-			</Link>
-			<Link href="/shows" onClick={onClickHandler}>
+			</NavbarLink>
+			<NavbarLink href="/shows" onClick={onClickHandler}>
 				Shows
-			</Link>
-			<Link href="/merch" onClick={onClickHandler}>
+			</NavbarLink>
+			<NavbarLink href="/merch" onClick={onClickHandler}>
 				Merch
-			</Link>
-			<Link href="/lyrics" onClick={onClickHandler}>
+			</NavbarLink>
+			<NavbarLink href="/lyrics" onClick={onClickHandler}>
 				Lyrics
-			</Link>
+			</NavbarLink>
 		</>
 	);
 }
 
 export default Links;
+
+const NavbarLink = styled(Link)`
+	&:hover {
+		transform: scale(1.1);
+		font-weight: 700;
+		text-decoration: underline overline;
+	}
+`;
