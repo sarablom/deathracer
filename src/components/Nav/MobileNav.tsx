@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Links from "./Links";
 import { X as Close } from "react-feather";
 import { VisuallyHidden } from "../VisuallyHidden";
-import Link from "next/link";
 
 type NavProps = {
 	showMenuHandler: (showMenu: boolean) => void;

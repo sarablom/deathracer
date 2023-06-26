@@ -1,0 +1,19 @@
+.carLogo {
+	animation: drivinFromRight 1s ease-in forwards;
+	width: 80%;
+	max-width: 750px;
+	height: fit-content;
+	margin: 0;
+}
+
+@keyframes drivinFromRight {
+	from {
+		transform: translate(175px, -100px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translate(35px, 15px);
+		opacity: 1;
+	}
+}

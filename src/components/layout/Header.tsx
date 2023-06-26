@@ -1,3 +1,4 @@
+"use client";
 import styled from "styled-components";
 import { Nav } from "../Nav";
 import logo from "../../../public/images/death-logo.svg";
