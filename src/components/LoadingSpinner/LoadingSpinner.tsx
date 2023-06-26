@@ -1,9 +1,8 @@
 "use client";
-import { FC } from "react";
 import styled from "styled-components";
 import { VisuallyHidden } from "../VisuallyHidden";
 
-export const LoadingSpinner: FC = () => (
+export const LoadingSpinner = () => (
 	<>
 		<Spinner className="loading-spinner" data-testid="loading-spinner">
 			<div className="lds-roller">

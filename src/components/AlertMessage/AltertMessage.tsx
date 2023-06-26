@@ -1,5 +1,4 @@
 "use client";
-import { FC } from "react";
 import styled from "styled-components";
 
 type Props = {
@@ -15,7 +14,7 @@ type Props = {
  * @param isSuccess - an optional boolean that indicates if the message should be styled as a success message. The default styling is an error message
  */
 
-export const AlertMessage: FC<Props> = ({ message, isVisible, isSuccess }) => {
+export const AlertMessage = ({ message, isVisible, isSuccess }: Props) => {
 	const classNameName = `${isVisible ? "" : "hidden"} ${
 		isSuccess ? "success" : ""
 	}`;

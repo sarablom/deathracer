@@ -1,5 +1,5 @@
 "use client";
-import { ReactNode, FC, useRef, useEffect } from "react";
+import { ReactNode, useRef, useEffect } from "react";
 import { X as Close } from "react-feather";
 import FocusLock from "react-focus-lock";
 import { RemoveScroll } from "react-remove-scroll";
@@ -13,7 +13,7 @@ interface Props {
 	children: ReactNode;
 }
 
-export const Modal: FC<Props> = ({ title, children }) => {
+export const Modal = ({ title, children }: Props) => {
 	const closeBtnRef = useRef<HTMLButtonElement>(null);
 	const dispatch = useAppDispatch();
 

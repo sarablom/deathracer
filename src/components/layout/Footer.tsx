@@ -1,8 +1,7 @@
 "use client";
-import { FC } from "react";
 import styled from "styled-components";
 
-export const Footer: FC = () => (
+export const Footer = () => (
 	<FooterWrapper>
 		<p>&#169; Deathracer, 2023</p>
 	</FooterWrapper>
