@@ -1,11 +1,11 @@
 import { MainHeading } from "../../components/MainHeading";
-import { Metadata } from "next";
+import { Metadata, NextPage } from "next";
 
 export const metadata: Metadata = {
 	title: "Deathracer --- About",
 };
 
-export const About = () => {
+export const About: NextPage = () => {
 	return (
 		<>
 			<MainHeading text="About" />
