@@ -14,7 +14,9 @@ export const Nav = () => {
 
 	return (
 		<NavContainer>
-			{width && width > 800 ? (
+			{!width ? (
+				<></>
+			) : width > 800 ? (
 				<NavWrapper>
 					<Links />
 				</NavWrapper>

@@ -4,8 +4,13 @@ import { Nav } from "../Nav";
 import logo from "../../../public/images/death-logo.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { useWindowDimensions } from "../../hooks/useWindowDimensions";
 
 export const Header = () => {
+	const { width } = useWindowDimensions();
+
+	if (!width) return <></>;
+
 	return (
 		<HeaderWrapper>
 			<Link href="/">
@@ -25,6 +30,19 @@ const HeaderWrapper = styled.header`
 	width: 100%;
 	background: var(--color-secondary);
 	padding: 16px 32px;
+	animation: foldFromTop 1s ease-in forwards;
+
+	@keyframes foldFromTop {
+	from {
+		transform: translateY(-175px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
 
 	img {
 		position: absolute;
