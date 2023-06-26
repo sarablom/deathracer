@@ -36,6 +36,7 @@ const MobielNavWrapper = styled.div`
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 0.7rem;
+	height: 100vh;
 	padding: 32px;
 	background: var(--color-blackish);
 	color: var(--color-whiteish);

@@ -33,8 +33,11 @@ export default Links;
 
 const NavbarLink = styled(Link)`
 	&:hover {
-		transform: scale(1.1);
 		font-weight: 700;
 		text-decoration: underline overline;
+
+		@media only screen and (min-width: 801px) {
+			transform: scale(1.1);
+		}
 	}
 `;
