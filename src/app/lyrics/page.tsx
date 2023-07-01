@@ -5,7 +5,7 @@ export const metadata: Metadata = {
 	title: "Deathracer --- Lyrics",
 };
 
-export const Lyrics: NextPage = () => {
+const Lyrics: NextPage = () => {
 	return (
 		<>
 			<MainHeading text="Lyrics" />

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
 	title: "Deathracer --- Merch",
 };
 
-export const Merch: NextPage = () => {
+const Merch: NextPage = () => {
 	return (
 		<>
 			<MainHeading text="Merch" />

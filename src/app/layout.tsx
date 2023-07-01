@@ -14,7 +14,7 @@ interface Props {
 	children: ReactNode;
 }
 
-export const RootLayout = ({ children }: Props) => (
+const RootLayout = ({ children }: Props) => (
 	<html lang="en" className={latoRegular.className}>
 		<body>
 			<ThemeProvider>

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
 	title: "Deathracer --- About",
 };
 
-export const About: NextPage = () => {
+const About: NextPage = () => {
 	return (
 		<>
 			<MainHeading text="About" />
