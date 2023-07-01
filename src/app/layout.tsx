@@ -1,11 +1,12 @@
 import { ReactNode } from "react";
 import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
-import { Lato } from 'next/font/google'
+import { Lato } from "next/font/google";
 import "../global-styles.css";
+import ThemeProvider from "../context/ThemeContext";
 
 const latoRegular = Lato({
-	subsets: ['latin'],
+	subsets: ["latin"],
 	weight: "400",
 });
 
@@ -16,9 +17,11 @@ interface Props {
 export const RootLayout = ({ children }: Props) => (
 	<html lang="en" className={latoRegular.className}>
 		<body>
-			<Header />
-			<main>{children}</main>
-			<Footer />
+			<ThemeProvider>
+				<Header />
+				<main>{children}</main>
+				<Footer />
+			</ThemeProvider>
 		</body>
 	</html>
 );
