@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Links from "./Links";
 import { X as Close } from "react-feather";
 import { VisuallyHidden } from "../VisuallyHidden";
+import FocusLock from "react-focus-lock";
+import { RemoveScroll } from "react-remove-scroll";
 
 type NavProps = {
 	showMenuHandler: (showMenu: boolean) => void;
@@ -10,19 +12,23 @@ type NavProps = {
 
 export const MobileNav = ({ showMenuHandler }: NavProps) => {
 	return (
-		<MobielNavWrapper>
-			<button
-				onClick={() => {
-					showMenuHandler(false);
-				}}
-			>
-				<Close
-					style={{ stroke: "var(--color-whiteish)", fontSize: "1.5rem" }}
-				/>
-				<VisuallyHidden text="Dismiss menu" />
-			</button>
-			<Links onClickHandler={() => showMenuHandler(false)} />
-		</MobielNavWrapper>
+		<FocusLock>
+			<RemoveScroll>
+				<MobielNavWrapper>
+					<button
+						onClick={() => {
+							showMenuHandler(false);
+						}}
+					>
+						<Close
+							style={{ stroke: "var(--color-whiteish)", fontSize: "1.5rem" }}
+						/>
+						<VisuallyHidden text="Dismiss menu" />
+					</button>
+					<Links onClickHandler={() => showMenuHandler(false)} />
+				</MobielNavWrapper>
+			</RemoveScroll>
+		</FocusLock>
 	);
 };
 
@@ -31,7 +37,6 @@ export default MobileNav;
 const MobielNavWrapper = styled.div`
 	position: absolute;
 	inset: 0;
-	z-index: 1;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
