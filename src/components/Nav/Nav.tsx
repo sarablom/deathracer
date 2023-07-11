@@ -22,7 +22,7 @@ export const Nav = () => {
 				</NavWrapper>
 			) : (
 				<MenuButton onClick={() => setShowMobileMenu(true)}>
-					<Menu style={{ fontSize: "1.5rem" }} />
+					<Menu style={{ stroke: "var(--color-blackish)", fontSize: "1.5rem" }} />
 					<VisuallyHidden text="Show menu" />
 				</MenuButton>
 			)}
