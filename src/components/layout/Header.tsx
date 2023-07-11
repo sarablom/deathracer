@@ -31,6 +31,7 @@ const HeaderWrapper = styled.header`
 	background: var(--color-secondary);
 	padding: 16px 32px;
 	animation: foldFromTop 1s ease-in forwards;
+	z-index: 1;
 
 	@keyframes foldFromTop {
 	from {
