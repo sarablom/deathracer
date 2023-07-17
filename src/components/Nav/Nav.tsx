@@ -1,16 +1,19 @@
 "use client";
 import React, { useState } from "react";
-
-import styled from "styled-components";
-import { Menu } from "react-feather";
+import { useTheme } from "../../context/ThemeContext";
 import { useWindowDimensions } from "../../hooks/useWindowDimensions";
+
+import { Menu } from "react-feather";
 import MobileNav from "./MobileNav";
 import Links from "./Links";
 import { VisuallyHidden } from "../VisuallyHidden";
 
+import styled from "styled-components";
+
 export const Nav = () => {
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
 	const { width } = useWindowDimensions();
+	const { theme, setTheme } = useTheme();
 
 	return (
 		<NavContainer>
@@ -22,7 +25,9 @@ export const Nav = () => {
 				</NavWrapper>
 			) : (
 				<MenuButton onClick={() => setShowMobileMenu(true)}>
-					<Menu style={{ stroke: "var(--color-blackish)", fontSize: "1.5rem" }} />
+					<Menu
+						style={{ stroke: "var(--color-blackish)", fontSize: "1.5rem" }}
+					/>
 					<VisuallyHidden text="Show menu" />
 				</MenuButton>
 			)}

@@ -29,7 +29,7 @@ export function useTheme() {
 
 	if (!data) {
 		throw new Error(
-			"Cannot consume ThemeContext context without a ThemeContextProvider"
+			"Cannot consume ThemeContext without a ThemeContextProvider"
 		);
 	}
 
