@@ -29,7 +29,7 @@ const HeaderWrapper = styled.header`
 	justify-content: space-between;
 	width: 100%;
 	background: var(--color-secondary);
-	padding: 16px 32px;
+	padding: 1rem;
 	animation: foldFromTop 1s ease-in forwards;
 	z-index: 1;
 
