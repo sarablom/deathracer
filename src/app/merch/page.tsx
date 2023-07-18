@@ -1,5 +1,6 @@
 import { MainHeading } from "../../components/MainHeading";
 import { Metadata, NextPage } from "next";
+import { ShoppingCart } from "../../components/ShoppingCart";
 
 export const metadata: Metadata = {
 	title: "Deathracer --- Merch",
@@ -8,7 +9,18 @@ export const metadata: Metadata = {
 const Merch: NextPage = () => {
 	return (
 		<>
-			<MainHeading text="Merch" />
+			<div
+				style={{
+					width: "55%",
+					display: "flex",
+					justifyContent: "space-between",
+					alignContent: "baseline",
+					marginLeft: "auto",
+				}}
+			>
+				<MainHeading text="Merch" />
+				<ShoppingCart />
+			</div>
 			<p>Here you will soon be able to buy Deathracer merch</p>
 		</>
 	);
