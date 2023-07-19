@@ -3,7 +3,7 @@ import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
 import { Lato } from "next/font/google";
 import "../global-styles.css";
-import ThemeProvider from "../context/ThemeContext";
+import { ThemeProvider } from "../context/ThemeContext";
 
 const latoRegular = Lato({
 	subsets: ["latin"],

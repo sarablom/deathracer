@@ -14,7 +14,7 @@ type Props = {
 	children: ReactNode;
 };
 
-function ThemeProvider({ children }: Props) {
+export const ThemeProvider = ({ children }: Props) => {
 	const [theme, setTheme] = useState<ThemeTypes>("light");
 
 	return (
@@ -22,7 +22,7 @@ function ThemeProvider({ children }: Props) {
 			{children}
 		</ThemeContext.Provider>
 	);
-}
+};
 
 export function useTheme() {
 	const data = useContext(ThemeContext);
@@ -35,5 +35,3 @@ export function useTheme() {
 
 	return data;
 }
-
-export default ThemeProvider;
