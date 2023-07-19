@@ -3,11 +3,12 @@ import React, { useState } from "react";
 import { useTheme } from "../../context/ThemeContext";
 import { useWindowDimensions } from "../../hooks/useWindowDimensions";
 
-import { Menu } from "react-feather";
 import MobileNav from "./MobileNav";
 import Links from "./Links";
 import { VisuallyHidden } from "../VisuallyHidden";
+import { ThemeToggle } from "../ThemeToggle";
 
+import { Menu } from "react-feather";
 import styled from "styled-components";
 
 export const Nav = () => {
@@ -20,16 +21,26 @@ export const Nav = () => {
 			{!width ? (
 				<></>
 			) : width > 800 ? (
-				<NavWrapper>
-					<Links />
-				</NavWrapper>
+				<>
+					<NavWrapper>
+						<Links />
+					</NavWrapper>
+					<div style={{ marginLeft: "auto" }}>
+						<ThemeToggle
+							value={theme}
+							onChange={() => setTheme(theme === "light" ? "dark" : "light")}
+						/>
+					</div>
+				</>
 			) : (
-				<MenuButton onClick={() => setShowMobileMenu(true)}>
-					<Menu
-						style={{ stroke: "var(--color-blackish)", fontSize: "1.5rem" }}
-					/>
-					<VisuallyHidden text="Show menu" />
-				</MenuButton>
+				<>
+					<MenuButton onClick={() => setShowMobileMenu(true)}>
+						<Menu
+							style={{ stroke: "var(--color-blackish)", fontSize: "1.5rem" }}
+						/>
+						<VisuallyHidden text="Show menu" />
+					</MenuButton>
+				</>
 			)}
 			{showMobileMenu && <MobileNav showMenuHandler={setShowMobileMenu} />}
 		</NavContainer>
