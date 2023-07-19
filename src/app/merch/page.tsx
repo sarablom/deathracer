@@ -1,6 +1,7 @@
-import { MainHeading } from "../../components/MainHeading";
 import { Metadata, NextPage } from "next";
+import { MainHeading } from "../../components/MainHeading";
 import { ShoppingCart } from "../../components/ShoppingCart";
+import { CartProvider } from "../../context/CartContext";
 
 export const metadata: Metadata = {
 	title: "Deathracer --- Merch",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 
 const Merch: NextPage = () => {
 	return (
-		<>
+		<CartProvider>
 			<div
 				style={{
 					width: "55%",
@@ -22,7 +23,7 @@ const Merch: NextPage = () => {
 				<ShoppingCart />
 			</div>
 			<p>Here you will soon be able to buy Deathracer merch</p>
-		</>
+		</CartProvider>
 	);
 };
 
