@@ -5,12 +5,12 @@ type CartItem = {
 	numOfItem: number;
 };
 
-type CartState = {
+export type CartState = {
 	cartItems: CartItem[] | [];
 	totalNumOfItems: number;
 };
 
-type CartAction = {
+export type CartAction = {
 	type: "addItem" | "deleteAllItems" | "deleteOneItem";
 	payload: CartItem;
 };

@@ -1,15 +1,13 @@
 "use client";
-import { useReducer } from "react";
+import { useContext, useReducer } from "react";
 import { cartReducer } from "../../reducer/cartReducer";
 
 import { ShoppingCart as Cart } from "react-feather";
 import styled from "styled-components";
+import { useCart } from "../../context/CartContext";
 
 export const ShoppingCart = () => {
-	const [state, dispatch] = useReducer(cartReducer, {
-		cartItems: [],
-		totalNumOfItems: 0,
-	});
+	const { state } = useCart();
 
 	return (
 		<CartWrapper>
