@@ -27,7 +27,7 @@ export const Nav = () => {
 					</NavWrapper>
 					<div style={{ marginLeft: "auto" }}>
 						<ThemeToggle
-							value={theme}
+							theme={theme}
 							onChange={() => setTheme(theme === "light" ? "dark" : "light")}
 						/>
 					</div>
@@ -36,7 +36,7 @@ export const Nav = () => {
 				<>
 					<MenuButton onClick={() => setShowMobileMenu(true)}>
 						<Menu
-							style={{ stroke: "var(--color-blackish)", fontSize: "1.5rem" }}
+							style={{ stroke: theme === "light" ? "var(--color-blackish)" : "var(--color-whiteish)", fontSize: "1.5rem" }}
 						/>
 						<VisuallyHidden text="Show menu" />
 					</MenuButton>
@@ -64,7 +64,7 @@ const NavWrapper = styled.nav`
 
 	a {
 		text-decoration: none;
-		color: var(--color-blackish);
+		color: inherit;
 		cursor: pointer;
 	}
 `;
