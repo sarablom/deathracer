@@ -1,11 +1,11 @@
 import { ReactNode } from "react";
 import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
-import { Lato } from "next/font/google";
-import "../global-styles.css";
-import { ThemeProvider } from "../context/ThemeContext";
+import { Poppins } from "next/font/google";
+import { GlobalStyles } from "../GlobalStyles";
+import { ThemeProvider, useTheme } from "../context/ThemeContext";
 
-const latoRegular = Lato({
+const poppinsRegular = Poppins({
 	subsets: ["latin"],
 	weight: "400",
 });
@@ -14,16 +14,19 @@ interface Props {
 	children: ReactNode;
 }
 
-const RootLayout = ({ children }: Props) => (
-	<html lang="en" className={latoRegular.className}>
-		<body>
+const RootLayout = ({ children }: Props) =>  (
+	<>
+		<GlobalStyles />
+		<html lang="en" className={poppinsRegular.className}>
 			<ThemeProvider>
-				<Header />
-				<main>{children}</main>
-				<Footer />
+				<body>
+					<Header />
+					<main>{children}</main>
+					<Footer />
+				</body>
 			</ThemeProvider>
-		</body>
-	</html>
+		</html>
+	</>
 );
 
 export default RootLayout;
