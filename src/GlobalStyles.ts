@@ -1,7 +1,12 @@
+"use client";
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyles = createGlobalStyle`
 :root {
 	--color-primary: #fa7978;
 	--color-secondary: hsla(0, 0%, 35%, 0.2);
 	--color-blackish: #4b4b4b;
+	--color-grey: #d2d2d2;
 	--color-whiteish: #fcfcfc;
 	--color-error: #ef5d80;
 	--color-warning: #efa35d;
@@ -39,12 +44,22 @@ body,
 body {
 	display: flex;
 	flex-direction: column;
-	color: var(--color-blackish);
-	background-color: var(--color-whiteish);
 	font-size: var(--font-size-base);
 	width: 100%;
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
+	color: var(--color-blackish);
+	background-color: var(--color-whiteish);
+}
+
+body.dark {
+	background: var(--color-blackish);
+	color: var(--color-whiteish);
+
+	img,
+	video {
+		filter: grayscale(50%) opacity(90%);
+	}
 }
 
 .page-wrapper {
@@ -85,3 +100,4 @@ h5,
 h6 {
 	overflow-wrap: break-word;
 }
+`;
