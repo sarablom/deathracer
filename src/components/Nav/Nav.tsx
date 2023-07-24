@@ -9,7 +9,13 @@ import { VisuallyHidden } from "../VisuallyHidden";
 import { ThemeToggle } from "../ThemeToggle";
 
 import { Menu } from "react-feather";
+import { Kanit } from "next/font/google";
 import styled from "styled-components";
+
+const kanitRegular = Kanit({
+	subsets: ["latin"],
+	weight: "400",
+});
 
 export const Nav = () => {
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -17,7 +23,7 @@ export const Nav = () => {
 	const { theme, setTheme } = useTheme();
 
 	return (
-		<NavContainer>
+		<NavContainer className={kanitRegular.className}>
 			{!width ? (
 				<></>
 			) : width > 800 ? (
