@@ -7,7 +7,6 @@ export const CarImage = styled(Image)`
 	width: 80%;
 	max-width: 750px;
 	height: fit-content;
-	margin: 0 auto;
 
 	@keyframes drivinFromRight {
 		from {

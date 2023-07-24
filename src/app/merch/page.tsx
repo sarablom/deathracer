@@ -12,15 +12,17 @@ const Merch: NextPage = () => {
 		<CartProvider>
 			<div
 				style={{
-					width: "55%",
 					display: "flex",
 					justifyContent: "space-between",
 					alignContent: "baseline",
 					marginLeft: "auto",
 				}}
 			>
+				<div style={{ flex: 1 }}></div>
 				<MainHeading text="Merch" />
-				<ShoppingCart />
+				<div style={{ flex: 1 }}>
+					<ShoppingCart />
+				</div>
 			</div>
 			<p>Here you will soon be able to buy Deathracer merch</p>
 		</CartProvider>
