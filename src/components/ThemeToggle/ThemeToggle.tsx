@@ -25,7 +25,7 @@ export const ThemeToggle = ({ theme, onChange, ...delegated }: Props) => {
 		>
 			<div>
 				{theme === "light" ? (
-					<Sun size={16} fill="#FFD200" stroke="var(--color-blackish)" />
+					<Sun size={18} fill="#FFD200" stroke="var(--color-blackish)" />
 				) : (
 					<Moon size={22} stroke="var(--color-grey)" />
 				)}
