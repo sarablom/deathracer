@@ -20,7 +20,7 @@ const kanitRegular = Kanit({
 export const Nav = () => {
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
 	const { width } = useWindowDimensions();
-	const { theme, setTheme } = useTheme();
+	const { theme } = useTheme();
 
 	return (
 		<NavContainer className={kanitRegular.className}>
@@ -32,21 +32,25 @@ export const Nav = () => {
 						<Links />
 					</NavWrapper>
 					<div style={{ marginLeft: "auto" }}>
-						<ThemeToggle
-							theme={theme}
-							onChange={() => setTheme(theme === "light" ? "dark" : "light")}
-						/>
+						<ThemeToggle />
 					</div>
 				</>
 			) : (
-				<>
+				<ButtonsWrapper>
+					<ThemeToggle />
 					<MenuButton onClick={() => setShowMobileMenu(true)}>
 						<Menu
-							style={{ stroke: theme === "light" ? "var(--color-blackish)" : "var(--color-whiteish)", fontSize: "1.5rem" }}
+							style={{
+								stroke:
+									theme === "light"
+										? "var(--color-blackish)"
+										: "var(--color-whiteish)",
+								fontSize: "1.5rem",
+							}}
 						/>
 						<VisuallyHidden text="Show menu" />
 					</MenuButton>
-				</>
+				</ButtonsWrapper>
 			)}
 			{showMobileMenu && <MobileNav showMenuHandler={setShowMobileMenu} />}
 		</NavContainer>
@@ -75,9 +79,14 @@ const NavWrapper = styled.nav`
 	}
 `;
 
+const ButtonsWrapper = styled.div`
+	display: flex;
+	gap: 16px;
+	margin-left: auto;
+`;
+
 const MenuButton = styled.button`
 	border: none;
 	background: transparent;
-	margin-left: auto;
 	cursor: pointer;
 `;
