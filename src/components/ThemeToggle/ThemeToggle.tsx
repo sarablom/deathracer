@@ -1,27 +1,24 @@
 "use client";
+import { useTheme } from "../../context/ThemeContext";
 import { motion } from "framer-motion";
 import { Moon, Sun } from "react-feather";
 
 import styled from "styled-components";
 
-type Props = {
-	theme: "light" | "dark";
-	onChange: (value: "light" | "dark") => void;
-};
+export const ThemeToggle = () => {
+	const { theme, setTheme } = useTheme();
 
-export const ThemeToggle = ({ theme, onChange, ...delegated }: Props) => {
 	return (
 		<ToggleWrapper
 			type="button"
 			role="switch"
 			theme={theme}
 			aria-checked={theme === "light"}
-			onClick={() => onChange(theme === "light" ? "dark" : "light")}
+			onClick={() => setTheme(theme === "light" ? "dark" : "light")}
 			style={{
 				flexDirection: theme === "light" ? "row" : "row-reverse",
 				justifyContent: theme === "light" ? "flex-end" : "flex-start",
 			}}
-			{...delegated}
 		>
 			<div>
 				{theme === "light" ? (
