@@ -6,6 +6,7 @@ import React, {
 	useEffect,
 	useState,
 } from "react";
+import Cookie from "js-cookie";
 
 type ThemeTypes = "dark" | "light";
 
@@ -26,8 +27,10 @@ export const ThemeProvider = ({ children }: Props) => {
 	useEffect(() => {
 		if (theme === "dark") {
 			document.body.classList.add("dark");
+			Cookie.set("savedTheme", "dark", { expires: 365 });
 		} else {
 			document.body.classList.remove("dark");
+			Cookie.set("savedTheme", "light", { expires: 365 });
 		}
 	}, [theme]);
 

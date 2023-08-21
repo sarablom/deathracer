@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { cookies } from "next/headers";
 import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
 import { Poppins } from "next/font/google";
@@ -14,19 +15,29 @@ interface Props {
 	children: ReactNode;
 }
 
-const RootLayout = ({ children }: Props) =>  (
-	<>
-		<GlobalStyles />
-		<html lang="en" className={poppinsRegular.className}>
-			<ThemeProvider>
-				<body>
-					<Header />
-					<main>{children}</main>
-					<Footer />
-				</body>
-			</ThemeProvider>
-		</html>
-	</>
-);
+export const metadata = {
+	title: "Deathracer",
+	description: "Bandsite of the Gothenburg based band Dethracer.",
+};
+
+const RootLayout = ({ children }: Props) => {
+	const savedTheme = cookies().get("saved-theme");
+	const theme = savedTheme?.value || "light";
+
+	return (
+		<>
+			<GlobalStyles />
+			<html lang="en" className={poppinsRegular.className}>
+				<ThemeProvider>
+					<body className={theme === "light" ? "" : "dark"}>
+						<Header initialTheme={theme as "light" | "dark"} />
+						<main>{children}</main>
+						<Footer />
+					</body>
+				</ThemeProvider>
+			</html>
+		</>
+	);
+};
 
 export default RootLayout;
