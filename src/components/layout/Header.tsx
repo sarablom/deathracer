@@ -1,4 +1,6 @@
 "use client";
+import { useEffect } from "react";
+import { useTheme } from "../../context/ThemeContext";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,8 +10,17 @@ import { Nav } from "../Nav";
 import logo from "../../../public/images/death-logo.svg";
 import styled from "styled-components";
 
-export const Header = () => {
+export const Header = ({
+	initialTheme,
+}: {
+	initialTheme: "light" | "dark";
+}) => {
 	const { width } = useWindowDimensions();
+	const { setTheme } = useTheme();
+
+	useEffect(() => {
+		setTheme(initialTheme);
+	}, []);
 
 	if (!width) return <></>;
 
@@ -36,16 +47,16 @@ const HeaderWrapper = styled.header`
 	z-index: 1;
 
 	@keyframes foldFromTop {
-	from {
-		transform: translateY(-175px);
-		opacity: 0;
-	}
+		from {
+			transform: translateY(-175px);
+			opacity: 0;
+		}
 
-	to {
-		transform: translateY(0);
-		opacity: 1;
+		to {
+			transform: translateY(0);
+			opacity: 1;
+		}
 	}
-}
 
 	img {
 		position: absolute;
