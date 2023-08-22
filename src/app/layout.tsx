@@ -4,7 +4,7 @@ import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
 import { Poppins } from "next/font/google";
 import { GlobalStyles } from "../GlobalStyles";
-import { ThemeProvider } from "../context/ThemeContext";
+import { ThemeProvider, ThemeTypes } from "../context/ThemeContext";
 
 const poppinsRegular = Poppins({
 	subsets: ["latin"],
@@ -21,16 +21,16 @@ export const metadata = {
 };
 
 const RootLayout = ({ children }: Props) => {
-	const savedTheme = cookies().get("saved-theme");
-	const theme = savedTheme?.value || "light";
+	const savedTheme = cookies().get("savedTheme");
+	const theme = savedTheme?.value || "light";  
 
 	return (
 		<>
 			<GlobalStyles />
 			<html lang="en" className={poppinsRegular.className}>
-				<ThemeProvider>
+				<ThemeProvider initialTheme={theme as ThemeTypes}>
 					<body className={theme === "light" ? "" : "dark"}>
-						<Header initialTheme={theme as "light" | "dark"} />
+						<Header />
 						<main>{children}</main>
 						<Footer />
 					</body>

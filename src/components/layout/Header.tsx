@@ -1,5 +1,4 @@
 "use client";
-import { useEffect } from "react";
 import { useTheme } from "../../context/ThemeContext";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,17 +9,9 @@ import { Nav } from "../Nav";
 import logo from "../../../public/images/death-logo.svg";
 import styled from "styled-components";
 
-export const Header = ({
-	initialTheme,
-}: {
-	initialTheme: "light" | "dark";
-}) => {
+export const Header = () => {
 	const { width } = useWindowDimensions();
 	const { setTheme } = useTheme();
-
-	useEffect(() => {
-		setTheme(initialTheme);
-	}, []);
 
 	if (!width) return <></>;
 

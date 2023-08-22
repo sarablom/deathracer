@@ -8,7 +8,7 @@ import React, {
 } from "react";
 import Cookie from "js-cookie";
 
-type ThemeTypes = "dark" | "light";
+export type ThemeTypes = "dark" | "light";
 
 type ThemeContextType = {
 	theme: ThemeTypes;
@@ -19,16 +19,17 @@ const ThemeContext = createContext<ThemeContextType | null>(null);
 
 type Props = {
 	children: ReactNode;
+	initialTheme: ThemeTypes;
 };
 
-export const ThemeProvider = ({ children }: Props) => {
-	const [theme, setTheme] = useState<ThemeTypes>("light");
+export const ThemeProvider = ({ children, initialTheme }: Props) => {
+	const [theme, setTheme] = useState<ThemeTypes>(initialTheme);
 
 	useEffect(() => {
 		if (theme === "dark") {
 			document.body.classList.add("dark");
 			Cookie.set("savedTheme", "dark", { expires: 365 });
-		} else {
+		} else if (theme === "light") {
 			document.body.classList.remove("dark");
 			Cookie.set("savedTheme", "light", { expires: 365 });
 		}
