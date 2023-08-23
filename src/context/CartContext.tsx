@@ -1,7 +1,8 @@
 "use client";
 import { ReactNode, useContext, useReducer } from "react";
 import { createContext } from "react";
-import { CartAction, CartState, cartReducer } from "../reducer/cartReducer";
+import { cartReducer } from "../reducer/cartReducer";
+import { CartAction, CartState } from "../@types/products";
 
 type CartContextType = {
 	state: CartState;
@@ -18,10 +19,7 @@ export const CartContext = createContext<CartContextType>(
 );
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
-	const [state, dispatch] = useReducer(cartReducer, {
-		cartItems: [],
-		totalNumOfItems: 0,
-	});
+	const [state, dispatch] = useReducer(cartReducer, initialState);
 
 	return (
 		<CartContext.Provider value={{ state, dispatch }}>
