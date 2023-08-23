@@ -8,18 +8,19 @@ import {
 	ProductSizes,
 } from "./StyledComponents";
 import { Product } from "../../types/products";
-import Image from "next/image";
+// import Image from "next/image";
 import { BuyButton } from "../BuyButton";
 
 export const ProductCard = ({ product }: { product: Product }) => {
 	return (
 		<ListItem>
-			<Image
+      <div></div>
+			{/* <Image
 				width={100}
 				height={50}
 				src={`/public/images/${product.img}`}
 				alt={product.title}
-			/>
+			/> */}
 			<ProductInfoWrapper>
 				<h2>{product.title}</h2>
 				<ProductDescription>{product.description}</ProductDescription>
