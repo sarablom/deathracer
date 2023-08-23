@@ -1,14 +1,19 @@
 "use client";
+import { useCart } from "../../context/CartContext";
 import styled from "styled-components";
 import { PlusCircle } from "react-feather";
 
-import { useReducer } from "react";
-import { cartReducer } from "../../reducer/cartReducer";
+import { Product } from "../../@types/products";
 
-export const BuyButton = () => {
-	// const { dispatch } = useReducer(cartReducer);
+export const BuyButton = ({ cartItem }: { cartItem: Product }) => {
+	const { dispatch } = useCart();
+
+	const handleOnAddToCart = () => {
+		dispatch({ type: "addItem", payload: cartItem });
+	};
+
 	return (
-		<ButtonWrapper>
+		<ButtonWrapper onClick={handleOnAddToCart}>
 			ADD TO CART <PlusCircle />
 		</ButtonWrapper>
 	);
