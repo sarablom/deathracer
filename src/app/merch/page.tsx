@@ -20,14 +20,13 @@ const Merch: NextPage = () => {
 					marginLeft: "auto",
 				}}
 			>
+				<ShoppingCart />
 				<MainHeading text="Merch" />
-				<p>
+			</div>
+				<p style={{marginBottom: "32px"}}>
 					This shop ain't functional yet, please return some other time with
 					your shopping pants on
 				</p>
-
-				<ShoppingCart />
-			</div>
 
 			<ProductsWrapper />
 		</CartProvider>
