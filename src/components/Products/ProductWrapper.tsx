@@ -3,8 +3,36 @@ import { ListWrapper } from "./StyledComponents";
 import { Product } from "../../types/products";
 import { ProductCard } from "./ProductCard";
 
+const products = [
+	{
+		title: "T-shirt",
+		description:
+			"T-shirt av ekologisk bomull med ett stort Deathracer-tryck centrerat över bröstet",
+		colors: ["#FFF", "#000", "#454545"],
+		sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+		price: 249,
+		img: "t-shirt.png",
+	},
+	{
+		title: "Tote bag",
+		description: "Praktisk tygkasse som du kan ha med dig överallt",
+		colors: ["#FFF", "#000", "#454545"],
+		sizes: [],
+		price: 189,
+		img: "tote-bag.png",
+	},
+	{
+		title: "Stickers",
+		description: "10 starka stickers att klistra precis överallt",
+		colors: ["#FFF"],
+		sizes: ["8x5 cm", "16x10cm", "24x15cm"],
+		price: 79,
+		img: "logo.jpg",
+	},
+];
+
 const ProductsWrapper: any = async () => {
-	const products = (await getProducts()) as Product[] | [];
+	// const products = (await getProducts()) as Product[] | [];
 
 	return (
 		<ListWrapper>
