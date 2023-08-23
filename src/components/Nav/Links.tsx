@@ -32,17 +32,9 @@ function Links({ onClickHandler }: LinksProps) {
 export default Links;
 
 const NavbarLink = styled(Link)`
-	&:hover {
-		font-weight: 700;
-		text-decoration: underline;
-
-		@media only screen and (min-width: 801px) {
-			transform: scale(1.1);
-		}
-	}
+	&:hover,
 	&:active,
 	&:focus {
-		font-size: 1.3rem;
 		font-weight: 700;
 		text-decoration: 1.5px var(--color-success) wavy underline;
 	}
