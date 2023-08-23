@@ -1,19 +1,5 @@
-type CartItem = {
-	id: string;
-	name: string;
-	price: number;
-	numOfItem: number;
-};
+import { CartAction, CartState } from "../@types/products";
 
-export type CartState = {
-	cartItems: CartItem[] | [];
-	totalNumOfItems: number;
-};
-
-export type CartAction = {
-	type: "addItem" | "deleteAllItems" | "deleteOneItem";
-	payload: CartItem;
-};
 
 export function cartReducer(state: CartState, action: CartAction) {
 	const itemInCart = state.cartItems.find(
