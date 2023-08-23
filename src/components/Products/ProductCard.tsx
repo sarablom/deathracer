@@ -7,14 +7,14 @@ import {
 	ProductPrice,
 	ProductSizes,
 } from "./StyledComponents";
-import { Product } from "../../types/products";
+import { Product } from "../../@types/products";
 // import Image from "next/image";
 import { BuyButton } from "../BuyButton";
 
 export const ProductCard = ({ product }: { product: Product }) => {
 	return (
 		<ListItem>
-      <div></div>
+			<div></div>
 			{/* <Image
 				width={100}
 				height={50}
@@ -39,7 +39,7 @@ export const ProductCard = ({ product }: { product: Product }) => {
 						))}
 				</ProductDetailsWrapper>
 				<ProductPrice>{product.price} SEK</ProductPrice>
-			<BuyButton />
+				<BuyButton cartItem={product} />
 			</ProductInfoWrapper>
 		</ListItem>
 	);
