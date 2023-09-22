@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import { useTheme } from "../../context/ThemeContext";
 import { useWindowDimensions } from "../../hooks/useWindowDimensions";
 
@@ -24,35 +24,37 @@ export const Nav = () => {
 
 	return (
 		<NavContainer className={kanitRegular.className}>
-			{!width ? (
-				<></>
-			) : width > 800 ? (
-				<>
-					<NavWrapper>
-						<Links />
-					</NavWrapper>
-					<div style={{ marginLeft: "auto" }}>
+			<Suspense>
+				{!width ? (
+					<></>
+				) : width > 800 ? (
+					<>
+						<NavWrapper>
+							<Links />
+						</NavWrapper>
+						<div style={{ marginLeft: "auto" }}>
+							<ThemeToggle />
+						</div>
+					</>
+				) : (
+					<ButtonsWrapper>
 						<ThemeToggle />
-					</div>
-				</>
-			) : (
-				<ButtonsWrapper>
-					<ThemeToggle />
-					<MenuButton onClick={() => setShowMobileMenu(true)}>
-						<Menu
-							style={{
-								stroke:
-									theme === "light"
-										? "var(--color-blackish)"
-										: "var(--color-whiteish)",
-								fontSize: "1.5rem",
-							}}
-						/>
-						<VisuallyHidden text="Show menu" />
-					</MenuButton>
-				</ButtonsWrapper>
-			)}
-			{showMobileMenu && <MobileNav showMenuHandler={setShowMobileMenu} />}
+						<MenuButton onClick={() => setShowMobileMenu(true)}>
+							<Menu
+								style={{
+									stroke:
+										theme === "light"
+											? "var(--color-blackish)"
+											: "var(--color-whiteish)",
+									fontSize: "1.5rem",
+								}}
+							/>
+							<VisuallyHidden text="Show menu" />
+						</MenuButton>
+					</ButtonsWrapper>
+				)}
+				{showMobileMenu && <MobileNav showMenuHandler={setShowMobileMenu} />}
+			</Suspense>
 		</NavContainer>
 	);
 };

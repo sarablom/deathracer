@@ -1,12 +1,13 @@
 import { ReactNode } from "react";
 import { cookies } from "next/headers";
-import { Header } from "../components/layout/Header";
-import { Footer } from "../components/layout/Footer";
 import { Poppins } from "next/font/google";
 import { ThemeProvider, ThemeTypes } from "../context/ThemeContext";
+
+import { GlobalStyles } from "./GlobalStyles";
 import StyledComponentsRegistry from "../lib/registry";
 
-import "./styles.css";
+import { Header } from "../components/layout/Header";
+import { Footer } from "../components/layout/Footer";
 
 const poppinsRegular = Poppins({
 	subsets: ["latin"],
@@ -30,6 +31,7 @@ const RootLayout = ({ children }: Props) => {
 		<html lang="en" className={poppinsRegular.className}>
 			<ThemeProvider initialTheme={theme as ThemeTypes}>
 				<StyledComponentsRegistry>
+					<GlobalStyles />
 					<body className={theme === "light" ? "" : "dark"}>
 						<Header />
 						<main>{children}</main>

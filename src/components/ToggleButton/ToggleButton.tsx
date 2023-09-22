@@ -17,7 +17,7 @@ export const ToggleButton = ({
 }: Props) => {
 	return (
 		<ToggleWrapper
-			on={checked}
+			turnedOn={checked}
 			type="button"
 			role="switch"
 			aria-checked={checked}

@@ -1,3 +1,7 @@
+"use client";
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyles = createGlobalStyle`
 :root {
 	--color-primary: #fa7978;
 	--color-secondary: hsla(0, 0%, 35%, 0.2);
@@ -97,3 +101,5 @@ h5,
 h6 {
 	overflow-wrap: break-word;
 }
+
+`;

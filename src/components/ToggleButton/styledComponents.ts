@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 type StyleProps = {
-	on: boolean;
+	turnedOn: boolean;
 };
 
 export const ToggleWrapper = styled.button<StyleProps>`
@@ -13,8 +13,8 @@ export const ToggleWrapper = styled.button<StyleProps>`
 	border-radius: 1000px;
 	border: none;
 	padding: 2px;
-	border: ${({ on }) =>
-		on
+	border: ${({ turnedOn }) =>
+		turnedOn
 			? "3px solid var(--color-blackish)"
 			: "3px solid var(--color-grey)"};
 	background: transparent;
@@ -26,8 +26,8 @@ export const ToggleWrapper = styled.button<StyleProps>`
 		display: block;
 		height: 100%;
 		aspect-ratio: 1 / 1;
-		background: ${({ on }) =>
-			on ? "var(--color-blackish)" : "var(--color-grey)"};
+		background: ${({ turnedOn }) =>
+			turnedOn ? "var(--color-blackish)" : "var(--color-grey)"};
 		border-radius: 1000px;
 	}
 `;
