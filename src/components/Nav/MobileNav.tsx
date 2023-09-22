@@ -5,7 +5,7 @@ import { X as Close } from "react-feather";
 import { VisuallyHidden } from "../VisuallyHidden";
 import FocusLock from "react-focus-lock";
 import { RemoveScroll } from "react-remove-scroll";
-import { MobielNavWrapper } from "./StyledComponents";
+import { MobielNavWrapper } from "./styledComponents";
 
 type NavProps = {
 	showMenuHandler: (showMenu: boolean) => void;
