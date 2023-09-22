@@ -5605,8 +5605,8 @@ const SvgWrapper = styled.svg`
 	.cls-4,
 	.cls-5,
 	.cls-6 {
-		animation: drivinFromRight 1s ease-in forwards;
-		opacity: 0;
+		/* animation: drivinFromRight 1s ease-in forwards;
+		opacity: 0; */
 	}
 
 	/* .cls-1 {

@@ -11,7 +11,6 @@ import styled from "styled-components";
 
 export const Header = () => {
 	const { width } = useWindowDimensions();
-	const { setTheme } = useTheme();
 
 	if (!width) return <></>;
 
@@ -34,7 +33,7 @@ const HeaderWrapper = styled.header`
 	width: 100%;
 	background: var(--color-secondary);
 	padding: 1rem;
-	animation: foldFromTop 1s ease-in forwards;
+	/* animation: foldFromTop 1s ease-in forwards; */
 	z-index: 1;
 
 	@keyframes foldFromTop {
