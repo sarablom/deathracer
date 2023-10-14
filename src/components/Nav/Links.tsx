@@ -32,6 +32,8 @@ function Links({ onClickHandler }: LinksProps) {
 export default Links;
 
 const NavbarLink = styled(Link)`
+	font-size: var(--font-size-m);
+
 	&:hover,
 	&:active,
 	&:focus {
