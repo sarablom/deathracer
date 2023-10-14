@@ -1,6 +1,5 @@
 "use client";
 import styled from "styled-components";
-import { ArrowUpCircle } from "react-feather";
 
 export const LyricsWrapper = styled.div`
 	display: flex;
@@ -44,16 +43,3 @@ export const SongList = styled.ol`
 	}
 `;
 
-export const ToTopOfPageButton = styled.button`
-	border: none;
-	background: var(--color-whiteish);
-	cursor: pointer;
-`;
-
-export const StyledArrowUpCircle = styled(ArrowUpCircle)`
-	position: fixed;
-	bottom: 32px;
-	right: 32px;
-	width: 44px;
-	height: 44px;
-`;

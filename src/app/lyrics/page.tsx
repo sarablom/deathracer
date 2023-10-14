@@ -1,17 +1,11 @@
-"use client";
 import { Metadata, NextPage } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
 import { MainHeading } from "../../components/MainHeading";
-import {
-	LyricsWrapper,
-	LyricsList,
-	SongList,
-	ToTopOfPageButton,
-	StyledArrowUpCircle,
-} from "./styles";
+import { LyricsWrapper, LyricsList, SongList } from "./styles";
 import albumCover from "../../../public/images/album-cover.jpg";
+import { ToTopOfPageButton } from "../../components/ToTopOfPageButton";
 
 export const metadata: Metadata = {
 	title: "Deathracer --- Lyrics",
@@ -355,16 +349,7 @@ const Lyrics: NextPage = () => {
 						<Link href="#car">Our Car</Link>
 					</li>
 				</SongList>
-				<ToTopOfPageButton
-					onClick={() =>
-						window.scrollTo({
-							top: 0,
-							behavior: "smooth",
-						})
-					}
-				>
-					<StyledArrowUpCircle />
-				</ToTopOfPageButton>
+				<ToTopOfPageButton />
 			</LyricsWrapper>
 		</>
 	);
