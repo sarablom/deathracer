@@ -17,7 +17,7 @@ export const ThemeToggle = () => {
 		>
 			<div>
 				{theme === "light" ? (
-					<Sun size={18} fill="#FFD200" stroke="var(--color-blackish)" />
+					<Sun size={18} fill="#FFD200" stroke="var(--color-text)" />
 				) : (
 					<Moon size={22} stroke="var(--color-grey)" />
 				)}

@@ -4,8 +4,9 @@ import styled from "styled-components";
 export const FooterWrapper = styled.footer`
 	display: flex;
 	align-items: flex-start;
-	background: var(--color-blackish);
-	color: var(--color-whiteish);
+  /* border-top: 4px solid var(--color-text); */
+	background: var(--color-background);
+	color: var(--color-text);
 	animation: foldFromBottom 1s ease-in forwards;
 
 @keyframes foldFromBottom {

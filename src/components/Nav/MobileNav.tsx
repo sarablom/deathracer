@@ -22,7 +22,7 @@ export const MobileNav = ({ showMenuHandler }: NavProps) => {
 						}}
 					>
 						<Close
-							style={{ stroke: "var(--color-whiteish)", fontSize: "1.5rem" }}
+							style={{ stroke: "var(--color-text)", fontSize: "1.5rem" }}
 						/>
 						<VisuallyHidden text="Dismiss menu" />
 					</button>

@@ -18,15 +18,17 @@ export const ToTopOfPageButton = () => {
 };
 
 const Button = styled.button`
-	border: none;
-	background: var(--color-whiteish);
-	cursor: pointer;
-`;
-
-const StyledArrowUpCircle = styled(ArrowUpCircle)`
 	position: fixed;
 	bottom: 32px;
 	right: 32px;
+	border: none;
+	background: var(--color-background);
+	cursor: pointer;
+  z-index: 1;
+`;
+
+const StyledArrowUpCircle = styled(ArrowUpCircle)`
 	width: 44px;
 	height: 44px;
+	stroke: var(--color-text);
 `;

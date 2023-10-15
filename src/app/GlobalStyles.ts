@@ -3,15 +3,15 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
 :root {
-	--color-primary: #fa7978;
-	--color-secondary: hsla(0, 0%, 35%, 0.2);
-	--color-blackish: #4b4b4b;
-	--color-medium-grey: #d9d9d9;
-	--color-grey: #d2d2d2;
-	--color-whiteish: #fcfcfc;
-	--color-error: #ef5d80;
+  --color-error: #ef5d80;
 	--color-warning: #efa35d;
 	--color-success: hsla(190, 22%, 46%, 1);
+  --color-primary: #fa7978;
+	--color-secondary: hsla(0, 0%, 35%, 0.2);
+	--color-medium-grey: #d9d9d9;
+	--color-grey: #d2d2d2;
+  --color-blackish: #4b4b4b;
+	--color-whiteish: #fcfcfc;
 
 	--font-size-s: clamp(0.8rem, 0.18vw + 0.66rem, 0.9rem);
 	--font-size-base: clamp(0.88rem, 0.34vw + 0.79rem, 1.06rem);
@@ -43,19 +43,22 @@ body,
 }
 
 body {
+	--color-text: #4b4b4b;
+	--color-background: #fcfcfc;
+  
 	display: flex;
 	flex-direction: column;
 	font-size: var(--font-size-base);
 	width: 100%;
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
-	color: var(--color-blackish);
-	background-color: var(--color-whiteish);
+	color: var(--color-text);
+	background-color: var(--color-background);
 }
 
 body.dark {
-	background: var(--color-blackish);
-	color: var(--color-whiteish);
+  --color-background: #4b4b4b;
+	--color-text: #fcfcfc;
 
 	img,
 	video {

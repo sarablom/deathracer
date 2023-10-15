@@ -28,6 +28,6 @@ const ButtonWrapper = styled.button`
 	border-radius: 8px;
 	margin-left: auto;
 	padding: 8px 16px;
-	background: var(--color-blackish);
+	background: var(--color-success);
 	color: var(--color-whiteish);
 `;

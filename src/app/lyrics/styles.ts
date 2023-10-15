@@ -9,9 +9,18 @@ export const LyricsWrapper = styled.div`
 	}
 `;
 
+export const FlexContainer = styled.div`
+	flex: 1;
+
+	@media (max-width: 800px) {
+		display: none;
+	}
+`;
+
 export const LyricsList = styled.ol`
 	list-style-type: none;
 	width: 600px;
+	max-width: 100%;
 
 	li {
 		margin-bottom: 32px;
@@ -30,7 +39,7 @@ export const SongList = styled.ol`
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 16px;
-    border-radius: 8px;
+		border-radius: 8px;
 	}
 
 	a {
@@ -42,4 +51,3 @@ export const SongList = styled.ol`
 		}
 	}
 `;
-

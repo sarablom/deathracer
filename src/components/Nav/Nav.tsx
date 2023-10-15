@@ -42,10 +42,7 @@ export const Nav = () => {
 						<MenuButton onClick={() => setShowMobileMenu(true)}>
 							<Menu
 								style={{
-									stroke:
-										theme === "light"
-											? "var(--color-blackish)"
-											: "var(--color-whiteish)",
+									stroke: "var(--color-text)",
 									fontSize: "1.5rem",
 								}}
 							/>

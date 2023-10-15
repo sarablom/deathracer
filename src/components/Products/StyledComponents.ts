@@ -8,6 +8,7 @@ export const ListWrapper = styled.ul`
 	gap: 32px;
 	margin: 0 auto;
 	padding: 0;
+  padding-bottom: 32px;
 `;
 
 export const ListItem = styled.li`

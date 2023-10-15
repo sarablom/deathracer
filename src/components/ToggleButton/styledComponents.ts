@@ -15,7 +15,7 @@ export const ToggleWrapper = styled.button<StyleProps>`
 	padding: 2px;
 	border: ${({ turnedOn }) =>
 		turnedOn
-			? "3px solid var(--color-blackish)"
+			? "3px solid var(--color-text)"
 			: "3px solid var(--color-grey)"};
 	background: transparent;
 	cursor: pointer;
@@ -27,7 +27,7 @@ export const ToggleWrapper = styled.button<StyleProps>`
 		height: 100%;
 		aspect-ratio: 1 / 1;
 		background: ${({ turnedOn }) =>
-			turnedOn ? "var(--color-blackish)" : "var(--color-grey)"};
+			turnedOn ? "var(--color-text)" : "var(--color-grey)"};
 		border-radius: 1000px;
 	}
 `;

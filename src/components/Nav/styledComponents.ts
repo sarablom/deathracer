@@ -10,8 +10,8 @@ export const MobielNavWrapper = styled.div`
 	gap: 0.7rem;
 	height: 100vh;
 	padding: 16px;
-	background: var(--color-blackish);
-	color: var(--color-whiteish);
+	background: var(--color-background);
+	color: var(--color-text);
 
 	button {
 		border: none;

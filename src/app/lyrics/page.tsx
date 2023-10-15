@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { MainHeading } from "../../components/MainHeading";
-import { LyricsWrapper, LyricsList, SongList } from "./styles";
+import { LyricsWrapper, LyricsList, SongList, FlexContainer } from "./styles";
 import albumCover from "../../../public/images/album-cover.jpg";
 import { ToTopOfPageButton } from "../../components/ToTopOfPageButton";
 
@@ -16,7 +16,7 @@ const Lyrics: NextPage = () => {
 		<>
 			<MainHeading text="Lyrics" />
 			<LyricsWrapper>
-				<div style={{ flex: 1 }} />
+				<FlexContainer />
 				<LyricsList>
 					<li id="haunted">
 						<h2>Haunted Mansion</h2>
@@ -319,6 +319,7 @@ const Lyrics: NextPage = () => {
 							Shot by stone
 						</p>
 					</li>
+          <ToTopOfPageButton />
 				</LyricsList>
 				<SongList>
 					<Image
@@ -349,7 +350,6 @@ const Lyrics: NextPage = () => {
 						<Link href="#car">Our Car</Link>
 					</li>
 				</SongList>
-				<ToTopOfPageButton />
 			</LyricsWrapper>
 		</>
 	);
