@@ -237,7 +237,7 @@ const Lyrics: NextPage = () => {
 							<br />
 							Dirty one
 							<br />
-							Life underground you'll find
+							Life underground you'll never find
 							<br />
 							Better make sure you don't fall behind
 						</p>
@@ -298,7 +298,7 @@ const Lyrics: NextPage = () => {
 							<br />
 							Heading for a cabin in the woods
 							<br />
-							Bitten by mosquitoes everywhere
+							Bitten by mosquitoes when we're there
 							<br />
 							Searching for some flowers in the fields
 							<br />
@@ -312,7 +312,7 @@ const Lyrics: NextPage = () => {
 							<br />
 							Leaving in a hurry
 							<br />
-							Buring tires
+							Burning tires
 							<br />
 							Omkörd by a Volvo
 							<br />

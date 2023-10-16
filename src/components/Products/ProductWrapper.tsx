@@ -1,5 +1,5 @@
 // import { getProducts } from "../../utils/file-helpers";
-import { ListWrapper } from "./StyledComponents";
+import { ListWrapper } from "./styles";
 // import { Product } from "../../@types/products";
 import { ProductCard } from "./ProductCard";
 

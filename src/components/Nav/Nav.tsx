@@ -20,37 +20,38 @@ const kanitRegular = Kanit({
 export const Nav = () => {
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
 	const { width } = useWindowDimensions();
-	const { theme } = useTheme();
 
 	return (
 		<NavContainer className={kanitRegular.className}>
 			<Suspense>
-				{!width ? (
-					<></>
-				) : width > 800 ? (
-					<>
-						<NavWrapper>
-							<Links />
-						</NavWrapper>
-						<div style={{ marginLeft: "auto" }}>
+				<>
+					{!width ? (
+						<></>
+					) : width > 800 ? (
+						<>
+							<NavWrapper>
+								<Links />
+							</NavWrapper>
+							<div style={{ marginLeft: "auto" }}>
+								<ThemeToggle />
+							</div>
+						</>
+					) : (
+						<ButtonsWrapper>
 							<ThemeToggle />
-						</div>
-					</>
-				) : (
-					<ButtonsWrapper>
-						<ThemeToggle />
-						<MenuButton onClick={() => setShowMobileMenu(true)}>
-							<Menu
-								style={{
-									stroke: "var(--color-text)",
-									fontSize: "1.5rem",
-								}}
-							/>
-							<VisuallyHidden text="Show menu" />
-						</MenuButton>
-					</ButtonsWrapper>
-				)}
-				{showMobileMenu && <MobileNav showMenuHandler={setShowMobileMenu} />}
+							<MenuButton onClick={() => setShowMobileMenu(true)}>
+								<Menu
+									style={{
+										stroke: "var(--color-text)",
+										fontSize: "1.5rem",
+									}}
+								/>
+								<VisuallyHidden text="Show menu" />
+							</MenuButton>
+						</ButtonsWrapper>
+					)}
+					{showMobileMenu && <MobileNav showMenuHandler={setShowMobileMenu} />}
+				</>
 			</Suspense>
 		</NavContainer>
 	);

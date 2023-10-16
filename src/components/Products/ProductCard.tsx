@@ -6,7 +6,7 @@ import {
 	ProductInfoWrapper,
 	ProductPrice,
 	ProductSizes,
-} from "./StyledComponents";
+} from "./styles";
 import { Product } from "../../@types/products";
 // import Image from "next/image";
 import { BuyButton } from "../BuyButton";

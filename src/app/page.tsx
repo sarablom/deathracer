@@ -1,10 +1,10 @@
 import logo from "../../public/images/logo.jpg";
-import { CarImage } from "./StyledComponents";
+import { CarImage } from "./styles";
 import { Metadata, NextPage } from "next";
 
 export const metadata: Metadata = {
 	title: "Deathracer",
-	description: "Information about the band Deathracer from Gothenburg, Sweden",
+	description: "Bandsite of Deathracer from Gothenburg, Sweden.",
 };
 
 const Home: NextPage = () => {

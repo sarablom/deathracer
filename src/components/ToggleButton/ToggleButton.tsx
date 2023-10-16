@@ -1,6 +1,6 @@
 import { ReactNode, CSSProperties } from "react";
 import { motion } from "framer-motion";
-import { ToggleWrapper } from "./styledComponents";
+import { ToggleWrapper } from "./styles";
 
 type Props = {
 	checked: boolean;
@@ -36,4 +36,3 @@ export const ToggleButton = ({
 		</ToggleWrapper>
 	);
 };
-
