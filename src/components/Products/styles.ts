@@ -8,7 +8,7 @@ export const ListWrapper = styled.ul`
 	gap: 32px;
 	margin: 0 auto;
 	padding: 0;
-  padding-bottom: 32px;
+	padding-bottom: 32px;
 `;
 
 export const ListItem = styled.li`
@@ -20,6 +20,7 @@ export const ListItem = styled.li`
 	color: var(--color-blackish);
 	border-radius: 16px;
 	padding: 32px;
+  width: max-content;
 `;
 
 export const ProductInfoWrapper = styled.div`
@@ -65,4 +66,9 @@ export const ProductPrice = styled.p`
 	margin-left: auto;
 	font-weight: 600;
 	font-size: 1.8rem;
+`;
+
+export const ImageWrapper = styled.div`
+	height: 100%;
+	width: 200px;
 `;

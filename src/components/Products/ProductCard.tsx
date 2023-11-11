@@ -6,21 +6,25 @@ import {
 	ProductInfoWrapper,
 	ProductPrice,
 	ProductSizes,
+	ImageWrapper,
 } from "./styles";
 import { Product } from "../../@types/products";
-// import Image from "next/image";
+import Image from "next/image";
 import { BuyButton } from "../BuyButton";
 
 export const ProductCard = ({ product }: { product: Product }) => {
 	return (
 		<ListItem>
-			<div></div>
-			{/* <Image
-				width={100}
-				height={50}
-				src={`/public/images/${product.img}`}
-				alt={product.title}
-			/> */}
+			<ImageWrapper>
+				<Image
+					width={0}
+					height={0}
+					sizes="100%"
+          style={{ width: '100%', height: 'auto' }}
+					src={`/images/${product.img}`}
+					alt={product.title}
+				/>
+			</ImageWrapper>
 			<ProductInfoWrapper>
 				<h2>{product.title}</h2>
 				<ProductDescription>{product.description}</ProductDescription>

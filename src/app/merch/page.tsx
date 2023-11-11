@@ -23,11 +23,13 @@ const Merch: NextPage = () => {
 				<ShoppingCart />
 				<MainHeading text="Merch" />
 			</div>
-				<p style={{marginBottom: "32px"}}>
-					This shop ain't functional yet, please return some other time with
-					your shopping pants on
-				</p>
-
+			<p style={{ marginBottom: "32px" }}>
+				This shop ain't functional yet, please return some other time with your
+				shopping pants on. 
+			</p>
+      <p style={{ marginBottom: "32px" }}>
+				Items are only available in Sweden.
+			</p>
 			<ProductsWrapper />
 		</CartProvider>
 	);
