@@ -17,11 +17,10 @@ export type CartItem = {
 };
 
 export type CartState = {
-	cartItems: CartItem[] | [];
-	totalNumOfItems: number;
+	cartItems: Product[] | [];
 };
 
 export type CartAction = {
 	type: "addItem" | "deleteAllItems" | "deleteOneItem";
-	payload: CartItem;
+	payload: Product;
 };

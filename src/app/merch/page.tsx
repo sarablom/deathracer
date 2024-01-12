@@ -1,7 +1,8 @@
+import { Fragment } from "react";
 import { Metadata, NextPage } from "next";
 import { MainHeading } from "../../components/MainHeading";
 import { ShoppingCart } from "../../components/ShoppingCart";
-import { CartProvider } from "../../context/CartContext";
+
 import ProductsWrapper from "../../components/Products/ProductWrapper";
 
 export const metadata: Metadata = {
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 const Merch: NextPage = () => {
 	return (
-		<CartProvider>
+		<Fragment>
 			<div
 				style={{
 					display: "flex",
@@ -25,13 +26,13 @@ const Merch: NextPage = () => {
 			</div>
 			<p style={{ marginBottom: "32px" }}>
 				This shop ain't functional yet, please return some other time with your
-				shopping pants on. 
+				shopping pants on.
 			</p>
-      <p style={{ marginBottom: "32px" }}>
+			<p style={{ marginBottom: "32px" }}>
 				Items are only available in Sweden.
 			</p>
 			<ProductsWrapper />
-		</CartProvider>
+		</Fragment>
 	);
 };
 

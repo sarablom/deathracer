@@ -1,54 +1,51 @@
 import { CartAction, CartState } from "../@types/products";
-
+import { initialState } from "../context/CartContext";
 
 export function cartReducer(state: CartState, action: CartAction) {
-	const itemInCart = state.cartItems.find(
-		item => item.id === action.payload.id
-	);
-	const filteredCart = state.cartItems.filter(
-		item => item.id !== action.payload.id
-	);
+	console.log(state, action);
 
 	switch (action.type) {
 		case "addItem":
-			if (itemInCart) {
-				return {
-					cartItems: [
-						...filteredCart,
-						{
-							...itemInCart,
-							numOfItem: itemInCart.numOfItem + 1,
-						},
-					],
-					totalNumOfItems: state.totalNumOfItems + 1,
-				};
-			} else {
+			const filteredCart = state.cartItems.filter(
+				item => item.id !== action.payload.id
+			);
+			return {
+				...state,
+				cartItems: [
+					...filteredCart,
+					{
+						...action.payload,
+						numOfItem: action.payload.numOfItem + 1,
+					},
+				],
+			};
+		case "deleteAllItems":
+			return {
+				...state,
+				cartItems: [...initialState.cartItems],
+			};
+
+		case "deleteOneItem":
+			if (action.payload.numOfItem <= 1) {
+				const filteredCart = state.cartItems.filter(
+					item => item.id !== action.payload.id
+				);
+
 				return {
 					...state,
-					cartItems: [...state.cartItems, action.payload],
-					totalNumOfItems: state.totalNumOfItems + 1,
+					cartItems: [...filteredCart, { ...action.payload, numOfItem: 0 }],
 				};
-			}
-		case "deleteAllItems":
-			if (itemInCart) {
+			} else {
+				const filteredCart = state.cartItems.filter(
+					item => item.id !== action.payload.id
+				);
+
 				return {
-					cartItems: filteredCart,
-					totalNumOfItems: state.totalNumOfItems - itemInCart.numOfItem,
-				};
-			}
-		case "deleteOneItem":
-			if (itemInCart && itemInCart.numOfItem === 1) {
-				return {
-					cartItems: filteredCart,
-					totalNumOfItems: state.totalNumOfItems - 1,
-				};
-			} else if (itemInCart && itemInCart.numOfItem > 1) {
-				return {
+					...state,
 					cartItems: [
 						...filteredCart,
-						{ ...itemInCart, numOfItem: itemInCart.numOfItem - 1 },
+						{ ...action.payload, numOfItem: action.payload.numOfItem - 1 },
 					],
-					totalNumOfItems: state.totalNumOfItems - 1,
 				};
 			}
 		default:

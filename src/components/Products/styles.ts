@@ -20,7 +20,8 @@ export const ListItem = styled.li`
 	color: var(--color-blackish);
 	border-radius: 16px;
 	padding: 32px;
-  width: max-content;
+	width: max-content;
+	max-width: 100%;
 `;
 
 export const ProductInfoWrapper = styled.div`
@@ -71,4 +72,116 @@ export const ProductPrice = styled.p`
 export const ImageWrapper = styled.div`
 	height: 100%;
 	width: 200px;
+`;
+
+export const NumberInputWrapper = styled.div`
+	width: 75px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+  align-self: flex-end;
+
+	button {
+		position: relative;
+		height: 100%;
+		margin-top: 32px;
+		padding: 12px 16px;
+		background-color: var(--color-mustard-extra-light);
+		border: 1px solid var(--color-mustard-light);
+		border-radius: none;
+		transition: all 0.1s ease-out;
+		cursor: pointer;
+		-webkit-appearance: none;
+		appearance: none;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		margin: 0;
+		color: var(--color-black);
+
+		&:active,
+		&:focus {
+			outline: none;
+		}
+
+		&:after {
+			content: "";
+
+			position: absolute;
+
+			opacity: 1;
+
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+
+			transition: inherit;
+
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		&:disabled {
+			pointer-events: none;
+
+			&:after {
+				opacity: 0.25;
+			}
+		}
+	}
+
+	.button-decrement::after {
+		background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 12H7' stroke='%23112C34' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+	}
+
+	.button-increment::after {
+		background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 7V17' stroke='%23112C34' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17 12H7' stroke='%23112C34' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+	}
+
+	.button-decrement {
+		border-right: none;
+	}
+
+	.button-increment {
+		border-left: none;
+	}
+`;
+
+export const NumberInput = styled.div`
+	display: grid;
+  place-content: center;
+  font-size: 18px;
+  font-weight: 700;
+
+	/* input[type="number"] {
+		-webkit-appearance: none;
+		-webkit-border-radius: 0px;
+		-moz-appearance: none;
+		appearance: none;
+		position: relative;
+		width: 100%;
+		min-width: 100%;
+		height: 48px;
+		background-color: var(--color-mustard-extra-light);
+		border: 1px solid var(--color-mustard-light);
+		border-left: 1px solid rgba(0, 0, 0, 0);
+		border-right: 1px solid rgba(0, 0, 0, 0);
+		border-radius: none;
+		font-size: 16px;
+		line-height: 24px;
+		text-align: center;
+		transition: all 0.2s ease-out;
+		-moz-appearance: textfield;
+
+		&:focus {
+			background-color: white;
+			border: 1px solid var(--color-mustard-midtone);
+			outline: none;
+		}
+
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+	} */
 `;

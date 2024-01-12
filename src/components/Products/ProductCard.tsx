@@ -11,6 +11,7 @@ import {
 import { Product } from "../../@types/products";
 import Image from "next/image";
 import { BuyButton } from "../BuyButton";
+import { ItemCounter } from "./ItemCounter";
 
 export const ProductCard = ({ product }: { product: Product }) => {
 	return (
@@ -20,7 +21,7 @@ export const ProductCard = ({ product }: { product: Product }) => {
 					width={0}
 					height={0}
 					sizes="100%"
-          style={{ width: '100%', height: 'auto' }}
+					style={{ width: "100%", height: "auto" }}
 					src={`/images/${product.img}`}
 					alt={product.title}
 				/>
@@ -43,7 +44,11 @@ export const ProductCard = ({ product }: { product: Product }) => {
 						))}
 				</ProductDetailsWrapper>
 				<ProductPrice>{product.price} SEK</ProductPrice>
-				<BuyButton cartItem={product} />
+				{product.numOfItem === 0 ? (
+					<BuyButton cartItem={product} />
+				) : (
+					<ItemCounter cartItem={product} />
+				)}
 			</ProductInfoWrapper>
 		</ListItem>
 	);

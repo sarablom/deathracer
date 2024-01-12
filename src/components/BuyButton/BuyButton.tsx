@@ -14,7 +14,7 @@ export const BuyButton = ({ cartItem }: { cartItem: Product }) => {
 
 	return (
 		<ButtonWrapper onClick={handleOnAddToCart}>
-			ADD TO CART <PlusCircle />
+			Lägg till <PlusCircle />
 		</ButtonWrapper>
 	);
 };
@@ -30,4 +30,5 @@ const ButtonWrapper = styled.button`
 	padding: 8px 16px;
 	background: var(--color-success);
 	color: var(--color-whiteish);
+	text-transform: uppercase;
 `;

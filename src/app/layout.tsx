@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { cookies } from "next/headers";
 import { Poppins } from "next/font/google";
 import { ThemeProvider, ThemeTypes } from "../context/ThemeContext";
+import { CartProvider } from "../context/CartContext";
 
 import { GlobalStyles } from "./GlobalStyles";
 import StyledComponentsRegistry from "../lib/registry";
@@ -52,6 +53,7 @@ const RootLayout = ({ children }: Props) => {
 	return (
 		<html lang="en" className={poppinsRegular.className}>
 			<ThemeProvider initialTheme={theme as ThemeTypes}>
+      <CartProvider>
 				<StyledComponentsRegistry>
 					<GlobalStyles />
 					<body className={theme === "light" ? "" : "dark"}>
@@ -60,6 +62,7 @@ const RootLayout = ({ children }: Props) => {
 						<Footer />
 					</body>
 				</StyledComponentsRegistry>
+        </CartProvider>
 			</ThemeProvider>
 		</html>
 	);

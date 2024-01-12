@@ -53,8 +53,8 @@ export const BandCampLogo = () => {
 			<g transform="matrix(1.3333333,0,0,-1.3333333,0,682.66667)" id="g10">
 				<g transform="scale(0.1)" id="g12">
 					<g id="g14">
-						<g clip-path="url(#clipPath20)" id="g16">
-							<g clip-path="url(#clipPath26)" id="g22">
+						<g clipPath="url(#clipPath20)" id="g16">
+							<g clipPath="url(#clipPath26)" id="g22">
 								<path
 									id="path28"
 									style={{
@@ -69,8 +69,8 @@ export const BandCampLogo = () => {
 						</g>
 					</g>
 					<g id="g30">
-						<g clip-path="url(#clipPath36)" id="g32">
-							<g clip-path="url(#clipPath42)" id="g38">
+						<g clipPath="url(#clipPath36)" id="g32">
+							<g clipPath="url(#clipPath42)" id="g38">
 								<path
 									id="path44"
 									style={{
@@ -85,8 +85,8 @@ export const BandCampLogo = () => {
 						</g>
 					</g>
 					<g id="g46">
-						<g clip-path="url(#clipPath52)" id="g48">
-							<g clip-path="url(#clipPath58)" id="g54">
+						<g clipPath="url(#clipPath52)" id="g48">
+							<g clipPath="url(#clipPath58)" id="g54">
 								<path
 									id="path60"
 									style={{
@@ -101,8 +101,8 @@ export const BandCampLogo = () => {
 						</g>
 					</g>
 					<g id="g62">
-						<g clip-path="url(#clipPath68)" id="g64">
-							<g clip-path="url(#clipPath74)" id="g70">
+						<g clipPath="url(#clipPath68)" id="g64">
+							<g clipPath="url(#clipPath74)" id="g70">
 								<path
 									id="path76"
 									style={{
