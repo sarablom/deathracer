@@ -1,12 +1,12 @@
 export type Product = {
-  id: string;
+	id: string;
 	title: string;
 	description: string;
 	colors: string[];
 	sizes: string[];
 	price: number;
 	img: string;
-  numOfItem: number;
+	numOfItem: number;
 };
 
 export type CartItem = {
@@ -17,7 +17,7 @@ export type CartItem = {
 };
 
 export type CartState = {
-	cartItems: Product[] | [];
+	cartItems: Product[];
 };
 
 export type CartAction = {

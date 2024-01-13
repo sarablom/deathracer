@@ -33,9 +33,9 @@ export const ShoppingCart = () => {
 					</span>
 				</ItemCount>
 			</CartWrapper>
-			{/* {cartModalIsOpen && (
+			{cartModalIsOpen && (
 				<ShoppingCartModal onClose={() => setCartModalIsOpen(false)} />
-			)} */}
+			)}
 		</>
 	);
 };
