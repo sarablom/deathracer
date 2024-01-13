@@ -12,7 +12,8 @@ const ProductsWrapper = () => {
 		<ListWrapper>
 			{cartItems.length > 0 &&
 				cartItems
-					.toSorted((a, b) => a.title.localeCompare(b.title))
+					.slice()
+					.sort((a, b) => a.title.localeCompare(b.title))
 					.map(product => (
 						<ProductCard key={product.title} product={product} />
 					))}
