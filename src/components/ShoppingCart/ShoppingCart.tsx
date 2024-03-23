@@ -9,6 +9,8 @@ import {
 	CartButton,
 	CloseButton,
 	CartList,
+	Backdrop,
+	CartListItem,
 } from "./styles";
 import { X as Close } from "react-feather";
 import { VisuallyHidden } from "../VisuallyHidden";
@@ -45,19 +47,22 @@ const ShoppingCartModal = ({ onClose }: { onClose: () => void }) => {
 	return (
 		<FocusLock>
 			<RemoveScroll>
+				<Backdrop onClick={onClose} />
 				<CloseButton onClick={onClose}>
-					<Close style={{ stroke: "var(--color-text)", fontSize: "1.5rem" }} />
+					<Close
+						style={{ stroke: "var(--color-whiteish)", fontSize: "1.5rem" }}
+					/>
 					<VisuallyHidden text="Dismiss shopping cart" />
 				</CloseButton>
 				<CartList>
 					{state.cartItems.filter(i => i.numOfItem > 0).length === 0 ? (
-						<li>The shopping cart is empty</li>
+						<CartListItem>The shopping cart is empty</CartListItem>
 					) : (
 						state.cartItems.map(item => (
-							<li key={item.id}>
+							<CartListItem key={item.id}>
 								{item.title}, {item.numOfItem} st, {item.numOfItem * item.price}{" "}
 								kr
-							</li>
+							</CartListItem>
 						))
 					)}
 				</CartList>

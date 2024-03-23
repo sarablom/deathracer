@@ -35,14 +35,15 @@ export const initialState = {
 		{
 			id: "3",
 			title: "Stickers",
-			description: "10 starka stickers att klistra precis överallt",
+			description:
+				"10 starka stickers att klistra precis överallt. Du kan välja mellan 3 olika storlekar.",
 			colors: ["#FFF"],
 			sizes: ["8x5 cm", "16x10cm", "24x15cm"],
 			price: 79,
 			img: "logo.jpg",
 			numOfItem: 0,
 		},
-	]
+	],
 };
 
 export const CartContext = createContext<CartContextType>(

@@ -34,10 +34,24 @@ export const CloseButton = styled.button`
 	border: none;
 	background: transparent;
 	cursor: pointer;
-	align-self: flex-end;
+	margin-left: auto;
 `;
 
 export const CartList = styled.ol`
 	list-style-type: none;
 	padding-left: 0;
+	position: relative;
+	background: white;
+	border-radius: 8px;
+	padding: 32px;
+`;
+
+export const CartListItem = styled.li`
+	color: var(--color-blackish);
+`;
+
+export const Backdrop = styled.div`
+	position: absolute;
+	inset: 0;
+	background: hsl(0deg 0% 0% / 0.75);
 `;
