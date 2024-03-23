@@ -9,7 +9,7 @@
 	},
 	{
 		"title": "Tote bag",
-		"description": "Praktisk tygkasse som du kan ha med dig överallt",
+		"description": "Praktisk och stark tygkasse som du kan ha med dig överallt",
 		"colors": ["#FFF", "#000", "#454545"],
 		"sizes": [],
 		"price": 189,
@@ -17,7 +17,7 @@
 	},
 	{
 		"title": "Stickers",
-		"description": "10 starka stickers att klistra precis överallt",
+		"description": "10 starka stickers att klistra precis överallt. Du kan välja mellan 3 olika storlekar.",
 		"colors": ["#FFF"],
 		"sizes": ["8x5 cm", "16x10cm", "24x15cm"],
 		"price": 79,

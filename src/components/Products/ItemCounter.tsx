@@ -23,21 +23,7 @@ export const ItemCounter = ({ cartItem }: { cartItem: Product }) => {
 				data-input-id="hue"
 				data-operation="decrement"
 			></button>
-			<NumberInput>
-				{/* <input
-					type="number"
-					id="hue"
-					name="hue"
-					className="number-input-text-box"
-					value= */}
-          {cartItem.numOfItem}
-				{/* // 	min="0"
-				// 	max="360"
-				// 	// onChange={handleAddItem}
-				// 	// onBlur="handleNumberInputBlur(event)"
-				// 	data-step="30"
-				// /> */}
-			</NumberInput>
+			<NumberInput>{cartItem.numOfItem}</NumberInput>
 			<button
 				type="button"
 				className="button-increment"

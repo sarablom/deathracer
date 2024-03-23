@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { cookies } from "next/headers";
-import { Poppins } from "next/font/google";
+import { Lato } from "next/font/google";
 import { ThemeProvider, ThemeTypes } from "../context/ThemeContext";
 import { CartProvider } from "../context/CartContext";
 
@@ -10,7 +10,7 @@ import StyledComponentsRegistry from "../lib/registry";
 import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
 
-const poppinsRegular = Poppins({
+const latoRegular = Lato({
 	subsets: ["latin"],
 	weight: "400",
 });
@@ -51,18 +51,22 @@ const RootLayout = ({ children }: Props) => {
 	const theme = savedTheme?.value || "light";
 
 	return (
-		<html lang="en" className={poppinsRegular.className}>
+		<html lang="en">
 			<ThemeProvider initialTheme={theme as ThemeTypes}>
-      <CartProvider>
-				<StyledComponentsRegistry>
-					<GlobalStyles />
-					<body className={theme === "light" ? "" : "dark"}>
-						<Header />
-						<main>{children}</main>
-						<Footer />
-					</body>
-				</StyledComponentsRegistry>
-        </CartProvider>
+				<CartProvider>
+					<StyledComponentsRegistry>
+						<GlobalStyles />
+						<body
+							className={`${latoRegular.className} ${
+								theme === "light" ? "" : "dark"
+							}`}
+						>
+							<Header />
+							<main>{children}</main>
+							<Footer />
+						</body>
+					</StyledComponentsRegistry>
+				</CartProvider>
 			</ThemeProvider>
 		</html>
 	);

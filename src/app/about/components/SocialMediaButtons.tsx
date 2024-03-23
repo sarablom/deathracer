@@ -10,7 +10,7 @@ export const SocialMediaButtons = () => {
 			<button
 				onClick={() =>
 					window.open(
-						"https://open.spotify.com/artist/1Vhr0X4FgDzqk8s33DUWCz?si=wWJl7ts7R9a-13DwKBBbNw"
+						"https://open.spotify.com/artist/7HDMCE5J32EIjBWTboML8F"
 					)
 				}
 			>

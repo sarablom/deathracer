@@ -72,6 +72,7 @@ export const ProductPrice = styled.p`
 export const ImageWrapper = styled.div`
 	height: 100%;
 	width: 200px;
+  margin: 0 auto;
 `;
 
 export const NumberInputWrapper = styled.div`
@@ -79,6 +80,7 @@ export const NumberInputWrapper = styled.div`
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
   align-self: flex-end;
+  gap: 4px;
 
 	button {
 		position: relative;
