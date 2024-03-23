@@ -35,23 +35,33 @@ export const CloseButton = styled.button`
 	background: transparent;
 	cursor: pointer;
 	margin-left: auto;
+	z-index: 2;
 `;
 
 export const CartList = styled.ol`
+	display: flex;
+	flex-direction: column;
 	list-style-type: none;
 	padding-left: 0;
 	position: relative;
 	background: white;
 	border-radius: 8px;
 	padding: 32px;
+	z-index: 2;
 `;
 
 export const CartListItem = styled.li`
 	color: var(--color-blackish);
+
+  :last-of-type {
+    align-self: flex-end;
+    font-weight: 700;
+  }
 `;
 
 export const Backdrop = styled.div`
 	position: absolute;
 	inset: 0;
 	background: hsl(0deg 0% 0% / 0.75);
+	z-index: 1;
 `;

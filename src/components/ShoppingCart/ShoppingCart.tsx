@@ -44,6 +44,13 @@ export const ShoppingCart = () => {
 
 const ShoppingCartModal = ({ onClose }: { onClose: () => void }) => {
 	const { state } = useCart();
+
+	const totalPrice = state.cartItems.reduce((acc, curr) => {
+		return acc + curr.numOfItem * curr.price;
+	}, 0);
+
+	console.log({ totalPrice });
+
 	return (
 		<FocusLock>
 			<RemoveScroll>
@@ -54,16 +61,23 @@ const ShoppingCartModal = ({ onClose }: { onClose: () => void }) => {
 					/>
 					<VisuallyHidden text="Dismiss shopping cart" />
 				</CloseButton>
+
 				<CartList>
+					<CartListItem>
+						<h2>Kundkorg</h2>
+					</CartListItem>
 					{state.cartItems.filter(i => i.numOfItem > 0).length === 0 ? (
 						<CartListItem>The shopping cart is empty</CartListItem>
 					) : (
-						state.cartItems.map(item => (
-							<CartListItem key={item.id}>
-								{item.title}, {item.numOfItem} st, {item.numOfItem * item.price}{" "}
-								kr
-							</CartListItem>
-						))
+						<>
+							{state.cartItems.map(item => (
+								<CartListItem key={item.id}>
+									{item.title}, {item.numOfItem} st,{" "}
+									{item.numOfItem * item.price} kr
+								</CartListItem>
+							))}
+							<CartListItem>Totalt: {totalPrice} kr</CartListItem>
+						</>
 					)}
 				</CartList>
 			</RemoveScroll>
